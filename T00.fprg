@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="T00"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-03 04:05:15 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtMjJJRTlKNEM7MjAyNS0xMC0wMzswMzo0MTowNyBQTTsyNTg5"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtMjJJRTlKNEM7MjAyNS0xMC0wMzswNDowNToxNSBQTTs0OzI3MDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bil1, bil2, hasil" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukkan  bilangan pertama:&quot;" newline="True"/>
+            <input variable="bil1"/>
+            <output expression="&quot;masukkan bialngan kedua:&quot;" newline="True"/>
+            <input variable="bil2"/>
+            <if expression="bil1  mod 2=0">
+                <then>
+                    <output expression="&quot;bilangan pertama:genap&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;bilangan pertama:ganjil&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="bil2 mod 2=0">
+                <then>
+                    <output expression="&quot;bilangan kedua:genap&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;bilangan kedua:ganjil&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="bil1&gt;bil2">
+                <then>
+                    <output expression="&quot;bilangan pertama lebih besar&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="bil2&gt;bil1">
+                        <then>
+                            <output expression="&quot;bilangan kedua lebih besar&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;kedua bilangan sama besar&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="(bil1 mod 2 = 0) and (bil2 mod 2 = 0)">
+                <then>
+                    <assign variable="hasil" expression="bil1 + bil2"/>
+                    <output expression="hasil" newline="True"/>
+                </then>
+                <else>
+                    <if expression="(bil1 mod 2=1 )and(bil2 mod 2=1)">
+                        <then>
+                            <assign variable="hasil" expression="bil1 * bil2"/>
+                            <output expression="hasil" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;berbeda jelas&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
